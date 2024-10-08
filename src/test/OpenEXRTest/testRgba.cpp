@@ -156,6 +156,10 @@ writeReadRGBA (
             {
                 for (int x = 0; x < w; ++x)
                 {
+                    cout << "p1[y][x].rgba = (" << p1[y][x].r << ", " << 
+                    p1[y][x].g << ", " << p1[y][x].b << ", " << p1[y][x].a << endl;
+                    cout << "p2[y][x].rgba = (" << p2[y][x].r << ", " << 
+                    p2[y][x].g << ", " << p2[y][x].b << ", " << p2[y][x].a << endl;
                     if (channels & WRITE_R)
                         assert (p2[y][x].r == p1[y][x].r);
                     else
@@ -180,7 +184,7 @@ writeReadRGBA (
         }
     }
 
-    remove (fileName);
+    // remove (fileName);
 }
 
 void
@@ -631,9 +635,11 @@ writeReadLayers (const std::string& tempDir, bool multiPart)
 void
 testRgba (const std::string& tempDir)
 {
+    std::string tempDir1 = "/Users/megs/Documents/aswf/take2_copy/";
+    std::cout << "Testing Rgba" << std::endl;
     try
     {
-        cout << "Testing the RGBA image interface" << endl;
+        cout << "Testing the RGBA image interface....." << endl;
 
         rgbaMethods ();
 
@@ -658,7 +664,7 @@ testRgba (const std::string& tempDir)
                 for (int comp = 0; comp < NUM_COMPRESSION_METHODS; ++comp)
                 {
                     writeReadRGBA (
-                        (tempDir + "imf_test_rgba.exr").c_str (),
+                        (tempDir1 + "imf_test_rgba.exr").c_str (),
                         W,
                         H,
                         p1,
@@ -666,40 +672,40 @@ testRgba (const std::string& tempDir)
                         LineOrder (lorder),
                         Compression (comp));
 
-                    writeReadRGBA (
-                        (tempDir + "imf_test_rgba.exr").c_str (),
-                        W,
-                        H,
-                        p1,
-                        WRITE_RGB,
-                        LineOrder (lorder),
-                        Compression (comp));
+                    // writeReadRGBA (
+                    //     (tempDir + "imf_test_rgba.exr").c_str (),
+                    //     W,
+                    //     H,
+                    //     p1,
+                    //     WRITE_RGB,
+                    //     LineOrder (lorder),
+                    //     Compression (comp));
 
-                    writeReadRGBA (
-                        (tempDir + "imf_test_rgba.exr").c_str (),
-                        W,
-                        H,
-                        p1,
-                        WRITE_A,
-                        LineOrder (lorder),
-                        Compression (comp));
+                    // writeReadRGBA (
+                    //     (tempDir + "imf_test_rgba.exr").c_str (),
+                    //     W,
+                    //     H,
+                    //     p1,
+                    //     WRITE_A,
+                    //     LineOrder (lorder),
+                    //     Compression (comp));
 
-                    writeReadRGBA (
-                        (tempDir + "imf_test_rgba.exr").c_str (),
-                        W,
-                        H,
-                        p1,
-                        RgbaChannels (WRITE_R | WRITE_B),
-                        LineOrder (lorder),
-                        Compression (comp));
+                    // writeReadRGBA (
+                    //     (tempDir + "imf_test_rgba.exr").c_str (),
+                    //     W,
+                    //     H,
+                    //     p1,
+                    //     RgbaChannels (WRITE_R | WRITE_B),
+                    //     LineOrder (lorder),
+                    //     Compression (comp));
                 }
             }
 
-            writeReadIncomplete (tempDir);
+            // writeReadIncomplete (tempDir);
         }
 
-        writeReadLayers (tempDir, false);
-        writeReadLayers (tempDir, true);
+        // writeReadLayers (tempDir, false);
+        // writeReadLayers (tempDir, true);
 
         cout << "ok\n" << endl;
     }

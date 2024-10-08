@@ -204,11 +204,11 @@ Global State
 .. doxygentypedef:: exr_memory_free_func_t
 
 .. doxygenfunction:: exr_get_library_version
-.. doxygenfunction:: exr_set_default_maximum_image_size
-.. doxygenfunction:: exr_get_default_maximum_image_size 
-.. doxygenfunction:: exr_set_default_maximum_tile_size
-.. doxygenfunction:: exr_get_default_maximum_tile_size
-.. doxygenfunction:: exr_set_default_memory_routines
+.. .. doxygenfunction:: exr_set_default_maximum_image_size
+.. .. doxygenfunction:: exr_get_default_maximum_image_size 
+.. .. doxygenfunction:: exr_set_default_maximum_tile_size
+.. .. doxygenfunction:: exr_get_default_maximum_tile_size
+.. .. doxygenfunction:: exr_set_default_memory_routines
 
 Chunk Reading
 ^^^^^^^^^^^^^
@@ -237,23 +237,23 @@ Chunk Writing
 Open for Read
 ^^^^^^^^^^^^^
 
-.. doxygenfunction:: exr_test_file_header
-.. doxygenfunction:: exr_start_read
+.. .. doxygenfunction:: exr_test_file_header
+.. .. doxygenfunction:: exr_start_read
 
 Open for Write
 ^^^^^^^^^^^^^^
 
-.. doxygenfunction:: exr_start_write
-.. doxygenfunction:: exr_start_inplace_header_update
-.. doxygenfunction:: exr_write_header
-.. doxygenfunction:: exr_set_longname_support
+.. .. doxygenfunction:: exr_start_write
+.. .. doxygenfunction:: exr_start_inplace_header_update
+.. .. doxygenfunction:: exr_write_header
+.. .. doxygenfunction:: exr_set_longname_support
 
 Close
 ^^^^^
 
 .. doxygentypedef:: exr_destroy_stream_func_ptr_t
 
-.. doxygenfunction:: exr_finish
+.. .. doxygenfunction:: exr_finish
 
 
 Context
@@ -266,10 +266,10 @@ Context
    :members:
 .. doxygentypedef:: exr_context_initializer_t
 
-.. doxygenfunction:: exr_get_file_name
-.. doxygenfunction:: exr_get_file_version_and_flags
-.. doxygenfunction:: exr_get_user_data
-.. doxygenfunction:: exr_register_attr_type_handler
+.. .. doxygenfunction:: exr_get_file_name
+.. .. doxygenfunction:: exr_get_file_version_and_flags
+.. .. doxygenfunction:: exr_get_user_data
+.. .. doxygenfunction:: exr_register_attr_type_handler
 
 Decoding
 ^^^^^^^^
@@ -293,9 +293,9 @@ Encoding
    :members:
 .. doxygentypedef:: exr_encode_pipeline_t
       
-.. doxygenstruct:: exr_coding_channel_info_t
-   :members:
-   :undoc-members:
+.. .. doxygenstruct:: exr_coding_channel_info_t
+..    :members:
+..    :undoc-members:
 
 .. doxygenfunction:: exr_encoding_initialize
 .. doxygenfunction:: exr_encoding_choose_default_routines
@@ -318,9 +318,9 @@ Attribute Values
 
 .. doxygenenum:: exr_attribute_type_t
 
-.. doxygenstruct:: exr_attribute_t
-   :members:
-   :undoc-members:
+.. .. doxygenstruct:: exr_attribute_t
+..    :members:
+..    :undoc-members:
       
 .. doxygenstruct:: exr_attr_v2i_t
    :members:
@@ -412,7 +412,7 @@ Reading
 .. doxygentypedef:: exr_read_func_ptr_t
 .. doxygentypedef:: exr_query_size_func_ptr_t
 
-.. doxygenfunction:: exr_get_count
+doxygenfunction:: exr_get_count
 .. doxygenfunction:: exr_get_name
 .. doxygenfunction:: exr_get_storage
 .. doxygenfunction:: exr_get_tile_levels
@@ -422,7 +422,7 @@ Reading
 .. doxygenfunction:: exr_get_scanlines_per_chunk
 .. doxygenfunction:: exr_get_chunk_unpacked_size
 
-.. doxygenfunction:: exr_get_attribute_count
+doxygenfunction:: exr_get_attribute_count
 .. doxygenfunction:: exr_get_attribute_by_index
 .. doxygenfunction:: exr_get_attribute_by_name
 .. doxygenfunction:: exr_get_attribute_list
@@ -432,7 +432,7 @@ Reading
 .. doxygenfunction:: exr_initialize_required_attr_simple
 .. doxygenfunction:: exr_copy_unset_attributes
 
-.. doxygenfunction:: exr_get_channels
+doxygenfunction:: exr_get_channels
 .. doxygenfunction:: exr_get_compression
 .. doxygenfunction:: exr_get_data_window
 .. doxygenfunction:: exr_get_display_window
@@ -443,7 +443,7 @@ Reading
 .. doxygenfunction:: exr_get_tile_descriptor
 .. doxygenfunction:: exr_get_version
 
-.. doxygenfunction:: exr_attr_get_box2i
+doxygenfunction:: exr_attr_get_box2i
 .. doxygenfunction:: exr_attr_get_box2f
 .. doxygenfunction:: exr_attr_get_channels
 .. doxygenfunction:: exr_attr_get_chromaticities
@@ -478,9 +478,9 @@ Writing
 
 .. doxygentypedef:: exr_write_func_ptr_t
 
-.. doxygenfunction:: exr_add_part
+doxygenfunction:: exr_add_part
 
-.. doxygenfunction:: exr_add_channel
+doxygenfunction:: exr_add_channel
 .. doxygenfunction:: exr_set_channels
 .. doxygenfunction:: exr_set_compression
 .. doxygenfunction:: exr_set_data_window
@@ -494,7 +494,7 @@ Writing
 .. doxygenfunction:: exr_set_version
 .. doxygenfunction:: exr_set_chunk_count
 
-.. doxygenfunction:: exr_attr_set_box2i
+doxygenfunction:: exr_attr_set_box2i
 .. doxygenfunction:: exr_attr_set_box2f
 .. doxygenfunction:: exr_attr_set_channels
 .. doxygenfunction:: exr_attr_set_chromaticities
@@ -533,7 +533,7 @@ Error Handling
 
 .. doxygentypedef:: exr_error_handler_cb_t
 
-.. doxygenfunction:: exr_get_default_error_message
+doxygenfunction:: exr_get_default_error_message
 .. doxygenfunction:: exr_get_error_code_as_string
 
 Debugging

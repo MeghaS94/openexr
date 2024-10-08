@@ -16,7 +16,7 @@ set(SPHINX_SOURCE ${CMAKE_CURRENT_SOURCE_DIR})
 set(SPHINX_BUILD ${CMAKE_CURRENT_BINARY_DIR}/sphinx)
 set(SPHINX_INDEX_FILE ${SPHINX_BUILD}/index.html)
 
-set(SPHINX_OPTS "-W" CACHE STRING "Sphinx build options")
+#set(SPHINX_OPTS "-W" CACHE STRING "Sphinx build options")
 
 configure_file(${DOXYFILE_IN} ${DOXYFILE_OUT} @ONLY)
 

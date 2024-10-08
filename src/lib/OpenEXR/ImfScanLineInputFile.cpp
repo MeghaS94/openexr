@@ -411,6 +411,7 @@ ScanLineInputFile::rawPixelDataToBuffer (
 void ScanLineInputFile::Data::readPixels (
     const FrameBuffer &fb, int scanLine1, int scanLine2)
 {
+    std::cout << "ScanLineInputFile::Data::readPixels..." << std::endl;
     exr_attr_box2i_t dw = _ctxt->dataWindow (partNumber);
     exr_chunk_info_t cinfo;
     int32_t          scansperchunk = 1;

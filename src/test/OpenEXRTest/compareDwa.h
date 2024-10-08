@@ -9,6 +9,7 @@
 #include "ImfArray.h"
 #include "ImfNamespace.h"
 #include "ImfRgba.h"
+// #include "ImfCRgbaFile.h"
 
 void compareDwa (
     int                                                                width,
@@ -16,5 +17,12 @@ void compareDwa (
     const OPENEXR_IMF_NAMESPACE::Array2D<OPENEXR_IMF_NAMESPACE::Rgba>& src,
     const OPENEXR_IMF_NAMESPACE::Array2D<OPENEXR_IMF_NAMESPACE::Rgba>& test,
     OPENEXR_IMF_NAMESPACE::RgbaChannels channels);
+
+// void compareDwa (
+//     int                                                                width,
+//     int                                                                height,
+//     const OPENEXR_IMF_NAMESPACE::Array2D<OPENEXR_IMF_NAMESPACE::ImfRgba>& src,
+//     const OPENEXR_IMF_NAMESPACE::Array2D<OPENEXR_IMF_NAMESPACE::ImfRgba>& test,
+//     OPENEXR_IMF_NAMESPACE::RgbaChannels channels);
 
 #endif

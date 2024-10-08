@@ -1340,15 +1340,18 @@ RgbaInputFile::readPixels (int scanLine1, int scanLine2)
 {
     if (_fromYca)
     {
+        std::cout << "RgbaInputFile::readPixels - _fromYca" << std::endl;
         std::lock_guard<std::mutex> lock (*_fromYca);
         _fromYca->readPixels (scanLine1, scanLine2);
     }
     else
     {
+        std::cout << "RgbaInputFile::readPixels - inputPart" << std::endl;
         _inputPart->readPixels (scanLine1, scanLine2);
 
         if (channels () & WRITE_Y)
         {
+            std::cout << "RgbaInputFile::readPixels - WRITE_Y" << std::endl;
             //
             // Luma channel has been written into red channel
             // Duplicate into green and blue channel to create gray image
